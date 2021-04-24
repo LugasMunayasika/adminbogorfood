@@ -16,7 +16,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo base_url();?>index.php/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -29,11 +29,11 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">UMKM A</a>
-                        <a class="collapse-item" href="cards.html">UMKM B</a>
-                        <a class="collapse-item" href="cards.html">UMKM C</a>
-                        <a class="collapse-item" href="cards.html">UMKM D</a>
-                        <a class="collapse-item" href="cards.html">UMKM E</a>
+                        <a class="collapse-item" href="buttons.html">Dapur Bujalu</a>
+                        <a class="collapse-item" href="cards.html">Desira</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>index.php/olaten">Olaten</a>
+                        <a class="collapse-item" href="cards.html">Rengginang Ceu Tuti</a>
+                        <a class="collapse-item" href="cards.html">Tobo Kito</a>
 
 
                     </div>

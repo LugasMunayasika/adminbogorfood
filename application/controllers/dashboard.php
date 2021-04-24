@@ -6,10 +6,12 @@ class Dashboard extends CI_Controller {
 	{
 		$data['user'] = $this->db->get_where('tbl_login',['username' =>
         $this->session->userdata('username')])->row_array();
+		$olaten = $this->db->query("SELECT * FROM tbl_olaten");
+		$data['olaten'] = $olaten->num_rows();
 		$this->model_login->keamanan();
 		$this->load->view('templates_admin/header');
 		$this->load->view('templates_admin/sidebar');
-		$this->load->view('v_dashboard',$data);
+		$this->load->view('templates_admin/v_dashboard',$data);
 		$this->load->view('templates_admin/footer');
 
 	}
