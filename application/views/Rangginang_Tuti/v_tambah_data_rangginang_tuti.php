@@ -53,7 +53,7 @@
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -62,56 +62,59 @@
         </ul>
     </nav>
 
-<!-- Begin Page Content -->
+    <!-- Begin Page Content -->
     <div class="container-fluid">
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Data Dapur Bujalu</h6><br>
-                <a href="<?php echo base_url().'index.php/dapur_bujalu/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
-                <?php echo $this->session->flashdata('pesan') ?> 
+                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Produk Rangginang Ceu Tuti</h6>
             </div>
-            
-            <div class="card-body">
-                <div class="table-responsive" >
-                    <table class="table table-bordered" id="tbl_dapur_bujalu" width="100%" cellspacing="0" style="text-align: center">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Produk</th>
-                                <!-- <th>Deskripsi Produk</th> -->
-                                <th>Foto Produk</th>
-                                <th>Harga</th>
-                                <th>Stock</th>
-                               <!--  <th>Tanggal Upload</th> -->
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                    <?php $no=1; foreach($dapur_bujalu as $d) :  ?>
-                            <tr>
-                                <td><?php echo $no++ ?></td>
-                                <td><?php echo $d->nama_produk?></td>
-                                <!-- <td><?php echo character_limiter($d->deskripsi_produk, 40)?></td> -->
-                                <td>
-                                   <img width = "70px" src="<?php echo base_url().'assets/img/dapur_bujalu/' .$d->foto_produk?>">
-                                </td>
-                                <td>Rp. <?php echo number_format($d->harga_produk,0,',','.') ?></td>
-                                <td><?php echo $d->stok_produk?></td>
-                                <!-- <td><?php echo $d->tanggal_upload_produk?></td> -->
-                                <td>
-                                <a class="btn btn-sm btn-success" href="<?php echo base_url('index.php/dapur_bujalu/detail/' .$d->id_produk)?>"><i class="fas fa-search-plus"></i></a>
-                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/dapur_bujalu/updateData/' .$d->id_produk)?>"><i class="fas fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/dapur_bujalu/deleteData/'.$d->id_produk)?>"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                    <?php endforeach; ?>
-                        </tbody>
-                    </table>
+    <div class="card-body">
+            <form method="POST" action="<?php echo base_url('index.php/rangginang_tuti/tambahDataAksi')?>">
+                <div class="form-group">
+                    <label>Kode Produk : </label>
+                    <input type="text" name="kode_produk" class="form-control">
+                    <?php echo form_error('kode_produk','<div class="text-small text-danger"></div>')?>
                 </div>
+          
+                <div class="form-group">
+                    <label>Nama Produk : </label>
+                    <input type="text" name="nama_produk" class="form-control">
+                    <?php echo form_error('nama_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi Produk : </label>
+                    <input type="text" name="deskripsi_produk" class="form-control">
+                    <?php echo form_error('deskripsi_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Foto Produk : </label>
+                    <input type="file" name="foto_produk" class="form-control">
+                    <?php echo form_error('foto_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Harga Produk</label>
+                    <input type="number" name="harga_produk" class="form-control">
+                    <?php echo form_error('harga_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Stock</label>
+                 <input type="number" name="stok_produk" class="form-control">
+                    <?php echo form_error('stok_produk','<div class="text-small text-danger"></div>')?>
+                 </div>
+          
+                 <div class="form-group">
+                    <label>Tanggal Upload Produk</label>
+                    <input type="date" name="tanggal_upload" class="form-control">
+                    <?php echo form_error('tanggal_upload','<div class="text-small text-danger"></div>')?>
+                </div>
+
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <a class="btn btn-danger" href="<?php echo base_url();?>index.php/rangginang_tuti">Cancel</a>
+                </form> 
             </div>
-        </div>
-    </div>
+        </div>               
 </div>
-<!-- /.content -->
+</div>

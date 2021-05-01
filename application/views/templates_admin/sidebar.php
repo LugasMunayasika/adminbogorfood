@@ -32,7 +32,7 @@
                         <a class="collapse-item" href="<?php echo base_url();?>index.php/dapur_bujalu">Dapur Bujalu</a>
                         <a class="collapse-item" href="cards.html">Desira</a>
                         <a class="collapse-item" href="<?php echo base_url();?>index.php/olaten">Olaten</a>
-                        <a class="collapse-item" href="cards.html">Rengginang Ceu Tuti</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>index.php/rangginang_tuti">Rangginang Ceu Tuti</a>
                         <a class="collapse-item" href="cards.html">Tobo Kito</a>
 
 
