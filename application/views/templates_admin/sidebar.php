@@ -29,7 +29,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Dapur Bujalu</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>index.php/dapur_bujalu">Dapur Bujalu</a>
                         <a class="collapse-item" href="cards.html">Desira</a>
                         <a class="collapse-item" href="<?php echo base_url();?>index.php/olaten">Olaten</a>
                         <a class="collapse-item" href="cards.html">Rengginang Ceu Tuti</a>

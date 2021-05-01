@@ -78,6 +78,20 @@
             "responsive": true,
         });
     });
+    $(document).ready(function(){
+        $('#tbl_dapur_bujalu').DataTable({
+            rowReorder:{
+                selector: 'td:nth-child(2)'
+            },
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": false,
+            "info": true,
+            "autoWidth": true,
+            "responsive": true,
+        });
+    });
 </script>
 </body>
 

@@ -87,8 +87,8 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Dapur Bujalu</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"> PRODUK</div><hr>
-                            <a href="" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $dapur_bujalu?> PRODUK</div><hr>
+                            <a href="<?php echo base_url('index.php/dapur_bujalu');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
