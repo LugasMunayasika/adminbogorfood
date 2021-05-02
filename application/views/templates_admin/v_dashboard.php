@@ -143,8 +143,8 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Tobo Kito</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"> PRODUK</div><hr>
-                                 <a href="" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tobokito ?> PRODUK</div><hr>
+                                 <a href="<?php echo base_url('index.php/tobokito');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

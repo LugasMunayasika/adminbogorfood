@@ -33,7 +33,7 @@
                         <a class="collapse-item" href="cards.html">Desira</a>
                         <a class="collapse-item" href="<?php echo base_url();?>index.php/olaten">Olaten</a>
                         <a class="collapse-item" href="<?php echo base_url();?>index.php/rangginang_tuti">Rangginang Ceu Tuti</a>
-                        <a class="collapse-item" href="cards.html">Tobo Kito</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>index.php/tobokito">Tobo Kito</a>
 
 
                     </div>

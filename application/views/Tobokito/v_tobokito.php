@@ -68,14 +68,14 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Data Toko Rangginang Ceu Tuti</h6><br>
-                <a href="<?php echo base_url().'index.php/rangginang_tuti/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
+                <h6 class="m-0 font-weight-bold text-primary">Data Toko Tobokito</h6><br>
+                <a href="<?php echo base_url().'index.php/tobokito/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
                 <?php echo $this->session->flashdata('pesan') ?> 
             </div>
             
             <div class="card-body">
                 <div class="table-responsive" >
-                    <table class="table table-bordered" id="tbl_rangginang_tuti" width="100%" cellspacing="0" style="text-align: center">
+                    <table class="table table-bordered" id="tbl_tobokito" width="100%" cellspacing="0" style="text-align: center">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -89,21 +89,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                    <?php $no=1; foreach($rangginang_tuti as $r) :  ?>
+                    <?php $no=1; foreach($tobokito as $t) :  ?>
                             <tr>
                                 <td><?php echo $no++ ?></td>
-                                <td><?php echo $r->nama_produk?></td>
-                                <!-- <td><?php echo character_limiter($r->deskripsi_produk, 40)?></td> -->
+                                <td><?php echo $t->nama_produk?></td>
+                                <!-- <td><?php echo character_limiter($t->deskripsi_produk, 40)?></td> -->
                                 <td>
-                                   <img width = "70px" src="<?php echo base_url().'assets/img/rangginang_tuti/' .$r->foto_produk?>">
+                                   <img width = "70px" src="<?php echo base_url().'assets/img/tobokito/' .$t->foto_produk?>">
                                 </td>
-                                <td>Rp. <?php echo number_format($r->harga_produk,0,',','.') ?></td>
-                                <td><?php echo $r->stok_produk?></td>
-                                <!-- <td><?php echo $r->tanggal_upload_produk?></td> -->
+                                <td>Rp. <?php echo number_format($t->harga_produk,0,',','.') ?></td>
+                                <td><?php echo $t->stok_produk?></td>
+                                <!-- <td><?php echo $t->tanggal_upload_produk?></td> -->
                                 <td>
-                                <a class="btn btn-sm btn-success" href="<?php echo base_url('index.php/rangginang_tuti/detail/' .$r->id_produk)?>"><i class="fas fa-search-plus"></i></a>
-                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/rangginang_tuti/updateData/' .$r->id_produk)?>"><i class="fas fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/rangginang_tuti/deleteData/'.$r->id_produk)?>"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-sm btn-success" href="<?php echo base_url('index.php/tobokito/detail/' .$t->id_produk)?>"><i class="fas fa-search-plus"></i></a>
+                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/tobokito/updateData/' .$t->id_produk)?>"><i class="fas fa-edit"></i></a>
+                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/tobokito/deleteData/'.$t->id_produk)?>"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                     <?php endforeach; ?>
