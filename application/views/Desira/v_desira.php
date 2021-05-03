@@ -5,7 +5,7 @@
 <div id="content" >
 
     <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top shadow">
+    <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
 
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -53,7 +53,7 @@
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>/login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -69,7 +69,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Data Toko Desira</h6><br>
-                <a href="<?php echo base_url().'index.php/desira/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
+                <a href="<?php echo base_url().'desira/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
                 <?php echo $this->session->flashdata('pesan') ?> 
             </div>
             
@@ -101,9 +101,9 @@
                                 <td><?php echo $de->stok_produk?></td>
                                 <!-- <td><?php echo $de->tanggal_upload_produk?></td> -->
                                 <td>
-                                <a class="btn btn-sm btn-success" href="<?php echo base_url('index.php/desira/detail/' .$de->id_produk)?>"><i class="fas fa-search-plus"></i></a>
-                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('index.php/desira/updateData/' .$de->id_produk)?>"><i class="fas fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('index.php/desira/deleteData/'.$de->id_produk)?>"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-sm btn-success" href="<?php echo base_url('desira/detail/' .$de->id_produk)?>"><i class="fas fa-search-plus"></i></a>
+                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('desira/updateData/' .$de->id_produk)?>"><i class="fas fa-edit"></i></a>
+                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('desira/deleteData/'.$de->id_produk)?>"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                     <?php endforeach; ?>

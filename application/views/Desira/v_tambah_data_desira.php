@@ -71,7 +71,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Tambah Data Produk Desira</h6>
             </div>
     <div class="card-body">
-            <form method="POST" action="<?php echo base_url('index.php/desira/tambahDataAksi')?>">
+            <form method="POST" action="<?php echo base_url('desira/tambahDataAksi')?>">
                 <div class="form-group">
                     <label>Kode Produk : </label>
                     <input type="text" name="kode_produk" class="form-control">
@@ -112,7 +112,7 @@
 
 
                     <button type="submit" class="btn btn-success">Submit</button>
-                    <a class="btn btn-danger" href="<?php echo base_url();?>index.php/desira">Cancel</a>
+                    <a class="btn btn-danger" href="<?php echo base_url();?>desira">Cancel</a>
                 </form> 
             </div>
         </div>               

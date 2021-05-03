@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
     <div class="container">
 
@@ -35,13 +35,14 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                            <img src="<?php echo base_url('assets');?>/img/logobogorfood.png"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Selamat Datang! Silahkan Login</h1>
                                     </div>
-                                    <form class="user" action="<?=base_url('index.php/login/ceklogin');?>" method="POST">
+                                    <form class="user" action="<?=base_url('login/ceklogin');?>" method="POST">
                                         <?php 
                                          $info = $this->session->flashdata('info');
                                             if(!empty($info)){
@@ -57,7 +58,7 @@
                                             <input type="password" class="form-control form-control-user"
                                                 name="password" placeholder="Password">
                                         </div>
-                                     <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+                                     <button type="submit" class="btn btn-success btn-block">Masuk</button>
                                         <hr>
                                     </form>
                                 </div>

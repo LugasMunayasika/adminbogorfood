@@ -4,7 +4,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -16,7 +16,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url();?>index.php/Dashboard">
+                <a class="nav-link" href="<?php echo base_url();?>Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -29,11 +29,11 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo base_url();?>index.php/dapur_bujalu">Dapur Bujalu</a>
-                        <a class="collapse-item" href="<?php echo base_url();?>index.php/desira">Desira</a>
-                        <a class="collapse-item" href="<?php echo base_url();?>index.php/olaten">Olaten</a>
-                        <a class="collapse-item" href="<?php echo base_url();?>index.php/rangginang_tuti">Rangginang Ceu Tuti</a>
-                        <a class="collapse-item" href="<?php echo base_url();?>index.php/tobokito">Tobo Kito</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>dapur_bujalu">Dapur Bujalu</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>desira">Desira</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>olaten">Olaten</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>rangginang_tuti">Rangginang Ceu Tuti</a>
+                        <a class="collapse-item" href="<?php echo base_url();?>tobokito">Tobo Kito</a>
 
 
                     </div>

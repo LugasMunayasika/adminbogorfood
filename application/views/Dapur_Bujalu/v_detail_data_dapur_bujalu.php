@@ -104,7 +104,7 @@
               <tr>
                 <th> </th>
                 <td>
-                    <a class="btn btn-danger float-right" href="<?=base_url()?>index.php/dapur_bujalu">Cancel</a>
+                    <a class="btn btn-danger float-right" href="<?=base_url()?>dapur_bujalu">Cancel</a>
                 </td>
               </tr>
              

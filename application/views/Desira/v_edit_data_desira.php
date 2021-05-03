@@ -72,7 +72,7 @@
             </div>
     <div class="card-body">
         <?php foreach ($toko_desira as $to) : ?>
-            <form method="POST" action="<?php echo base_url('index.php/desira/updateDataAksi'); ?>">
+            <form method="POST" action="<?php echo base_url('desira/updateDataAksi'); ?>">
                 <div class="form-group">
                     <label>Kode Produk : </label>
                     <input type="hidden" name="id_produk" class="form-control" value="<?php echo $to->id_produk ?>" >
@@ -116,7 +116,7 @@
 
 
                     <button type="submit" class="btn btn-success">Submit</button>
-                    <a class="btn btn-danger" href="<?php echo base_url();?>index.php/desira">Cancel</a>
+                    <a class="btn btn-danger" href="<?php echo base_url();?>desira">Cancel</a>
                 </form>
                 <?php endforeach; ?> 
             </div>

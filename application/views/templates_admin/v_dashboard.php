@@ -5,7 +5,7 @@
 <div id="content" >
 
     <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top shadow">
+    <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
 
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -55,7 +55,7 @@
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -88,7 +88,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Dapur Bujalu</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $dapur_bujalu?> PRODUK</div><hr>
-                            <a href="<?php echo base_url('index.php/dapur_bujalu');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo base_url('dapur_bujalu');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Desira</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $desira ?> PRODUK</div><hr>
-                            <a href="<?php echo base_url('index.php/desira');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo base_url('desira');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Olaten</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $olaten ?> PRODUK</div><hr>
-                                 <a href="<?php echo base_url('index.php/olaten');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                 <a href="<?php echo base_url('olaten');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Rangginang Ceu Tuti</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php echo $rangginang_tuti ?> PRODUK</div><hr>
-                                 <a href="<?php echo base_url('index.php/rangginang_tuti');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                 <a href="<?php echo base_url('rangginang_tuti');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Tobo Kito</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tobokito ?> PRODUK</div><hr>
-                                 <a href="<?php echo base_url('index.php/tobokito');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                 <a href="<?php echo base_url('tobokito');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
