@@ -1,5 +1,5 @@
 <?php
-class Model_desira extends CI_model
+class Model_tauty_cake extends CI_model
 {
     public function get_data($table)
     {
@@ -9,7 +9,7 @@ class Model_desira extends CI_model
 		$this->db->insert($table,$data);
 	}
     public function detail_data($id=NULL){
-		$query = $this->db->get_where('tbl_desira', array('id_produk' => $id)) ->row();
+		$query = $this->db->get_where('tbl_tauty_cake', array('id_produk' => $id)) ->row();
 		return $query;
 	}
     public function delete_data($where,$table){

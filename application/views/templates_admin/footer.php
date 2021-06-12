@@ -93,7 +93,7 @@
         });
     });
     $(document).ready(function(){
-        $('#tbl_desira').DataTable({
+        $('#tbl_tauty_cake').DataTable({
             rowReorder:{
                 selector: 'td:nth-child(2)'
             },

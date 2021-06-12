@@ -22,7 +22,7 @@
     </a>
 </li>
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item dropdown <?= $this->uri->segment(1) == 'dapur_bujalu' || $this->uri->segment(1) == 'olaten' || $this->uri->segment(1) == 'desira' || $this->uri->segment(1) == 'rangginang_tuti' ? 'active' : ''?>">
+<li class="nav-item dropdown <?= $this->uri->segment(1) == 'dapur_bujalu' || $this->uri->segment(1) == 'olaten' || $this->uri->segment(1) == 'tauty_cake' || $this->uri->segment(1) == 'rangginang_tuti' ? 'active' : ''?>">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
         aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-database"></i>
@@ -34,8 +34,8 @@
             'collapse-item style="background-color: #1cc88a"'  : ''?> href="<?php echo base_url();?>dapur_bujalu">Toko Dapur Bujalu</a>
              <a class="collapse-item" <?= $this->uri->segment(1) == 'olaten' ? 
             'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>olaten">Toko Olaten</a>
-            <a class="collapse-item" <?= $this->uri->segment(1) == 'desira' ? 
-            'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>desira">Toko Desira</a>
+            <a class="collapse-item" <?= $this->uri->segment(1) == 'tauty_cake' ? 
+            'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>tauty_cake">Toko Tauty Cake</a>
              <a class="collapse-item" <?= $this->uri->segment(1) == 'rangginang_tuti' ? 
             'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>rangginang_tuti">Toko Rangginang Tuti</a>
         </div>

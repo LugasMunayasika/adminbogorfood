@@ -14,8 +14,8 @@ class Dashboard extends CI_Controller {
 		$data['rangginang_tuti'] = $rangginang_tuti->num_rows();
 		$tobokito = $this->db->query("SELECT * FROM tbl_tobokito");
 		$data['tobokito'] = $tobokito->num_rows();
-		$desira = $this->db->query("SELECT * FROM tbl_desira");
-		$data['desira'] = $desira->num_rows();
+		$tauty_cake = $this->db->query("SELECT * FROM tbl_tauty_cake");
+		$data['tauty_cake'] = $tauty_cake->num_rows();
 		$data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$data['title']="Dashboard";
 		$this->model_login->keamanan();

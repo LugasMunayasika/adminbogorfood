@@ -56,7 +56,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>/login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -65,56 +65,57 @@
         </ul>
     </nav>
 
-<!-- Begin Page Content -->
+    <!-- Begin Page Content -->
     <div class="container-fluid">
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Data Toko Desira</h6><br>
-                <a href="<?php echo base_url().'desira/tambahData/' ?>" class="btn btn-success"><i class="fa fa-plus">Tambah Data</i></a><hr> 
-                <?php echo $this->session->flashdata('pesan') ?> 
+                <h6 class="m-0 font-weight-bold text-primary">Detail Data Produk Toko Tauty Cake</h6>
             </div>
-            
-            <div class="card-body">
-                <div class="table-responsive" >
-                    <table class="table table-bordered" id="tbl_desira" width="100%" cellspacing="0" style="text-align: center">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Produk</th>
-                                <!-- <th>Deskripsi Produk</th> -->
-                                <th>Foto Produk</th>
-                                <th>Harga</th>
-                                <th>Stock</th>
-                               <!--  <th>Tanggal Upload</th> -->
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                    <?php $no=1; foreach($desira as $de) :  ?>
-                            <tr>
-                                <td><?php echo $no++ ?></td>
-                                <td><?php echo $de->nama_produk?></td>
-                                <!-- <td><?php echo character_limiter($de->deskripsi_produk, 40)?></td> -->
-                                <td>
-                                   <img width = "70px" src="<?php echo base_url().'assets/img/desira/' .$de->foto_produk?>">
-                                </td>
-                                <td>Rp. <?php echo number_format($de->harga_produk,0,',','.') ?></td>
-                                <td><?php echo $de->stok_produk?></td>
-                                <!-- <td><?php echo $de->tanggal_upload_produk?></td> -->
-                                <td>
-                                <a class="btn btn-sm btn-success" href="<?php echo base_url('desira/detail/' .$de->id_produk)?>"><i class="fas fa-search-plus"></i></a>
-                                <a class="btn btn-sm btn-primary" href="<?php echo base_url('desira/updateData/' .$de->id_produk)?>"><i class="fas fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('desira/deleteData/'.$de->id_produk)?>"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                    <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
+    <div class="card-body">
+        <table class="table table-no-bordered table-striped">
+            <tbody>
+              <tr>
+                <th> Kode Produk  </th>
+                <td><span> : <?php echo $detail->kode_produk ?></span></td>
+              </tr>
+              <tr>
+                <th> Nama Produk   </th>
+                <td><span> : <?php echo $detail->nama_produk ?></span></td>
+              </tr>
+                <tr>
+                <th> Deskripsi Produk   </th>
+                <td><span> : <?php echo $detail->deskripsi_produk ?></span></td>
+              </tr>
+              <tr>
+                <th> Foto Produk </th>
+                <td><span> :  <img width="200px" src="<?php echo base_url().'assets/img/tauty_cake/'.$detail->foto_produk ?>"></span></td>
+              </tr>
+              <tr>
+                <th> Harga Produk </th>
+                <td><span> : Rp. <?php echo number_format($detail->harga_produk,0,',','.') ?></span></td>
+              </tr>
+              <tr>
+                <th> Stock </th>
+                <td><span> : <?php echo $detail->stok_produk ?></span></td>
+              </tr>
+               <tr>
+                <th> Tanggal Upload </th>
+                <td><span> : <?php echo $detail->tanggal_upload?></span></td>
+              </tr>
+              <tr>
+                <th> </th>
+                <td>
+                    <a class="btn btn-danger float-right" href="<?=base_url()?>tauty_cake">Cancel</a>
+                </td>
+              </tr>
+             
+                
+
+        </tbody> 
+      </table>
             </div>
-        </div>
-    </div>
+        </div>               
 </div>
-<!-- /.content -->
+</div>

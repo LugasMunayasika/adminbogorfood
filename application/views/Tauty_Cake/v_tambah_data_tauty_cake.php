@@ -71,57 +71,52 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Data Produk Toko Desira</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Produk Tauty Cake</h6>
             </div>
     <div class="card-body">
-        <?php foreach ($toko_desira as $to) : ?>
-            <form method="POST" action="<?php echo base_url('desira/updateDataAksi'); ?>">
+            <form method="POST" action="<?php echo base_url('tauty_cake/tambahDataAksi')?>">
                 <div class="form-group">
                     <label>Kode Produk : </label>
-                    <input type="hidden" name="id_produk" class="form-control" value="<?php echo $to->id_produk ?>" >
-                    <input type="text" name="kode_produk" class="form-control" value="<?php echo $to->kode_produk ?>">
+                    <input type="text" name="kode_produk" class="form-control">
                     <?php echo form_error('kode_produk','<div class="text-small text-danger"></div>')?>
                 </div>
           
                 <div class="form-group">
                     <label>Nama Produk : </label>
-                    <input type="text" name="nama_produk" class="form-control" value="<?php echo $to->nama_produk ?>">
+                    <input type="text" name="nama_produk" class="form-control">
                     <?php echo form_error('nama_produk','<div class="text-small text-danger"></div>')?>
                 </div>
                 <div class="form-group">
                     <label>Deskripsi Produk : </label>
-                    <input type="text" name="deskripsi_produk" class="form-control" value="<?php echo $to->deskripsi_produk ?>">
+                    <input type="text" name="deskripsi_produk" class="form-control">
                     <?php echo form_error('deskripsi_produk','<div class="text-small text-danger"></div>')?>
                 </div>
                 <div class="form-group">
                     <label>Foto Produk : </label>
-                    <input type="file" name="foto_produk" class="form-control-file"><br>
-                    <img src="<?php echo base_url().'assets/img/desira/'.$to->foto_produk ?>" width="90" height="110">
-                    <p><b><?php echo $to->foto_produk?></b></p>
-                   <?php echo form_error('foto_produk','<div class="text-small text-danger"></div>')?>
+                    <input type="file" name="foto_produk" class="form-control">
+                    <?php echo form_error('foto_produk','<div class="text-small text-danger"></div>')?>
                 </div>
                 <div class="form-group">
                     <label>Harga Produk</label>
-                    <input type="number" name="harga_produk" class="form-control" value="<?php echo $to->harga_produk ?>">
+                    <input type="number" name="harga_produk" class="form-control">
                     <?php echo form_error('harga_produk','<div class="text-small text-danger"></div>')?>
                 </div>
                 <div class="form-group">
                     <label>Stock</label>
-                 <input type="number" name="stok_produk" class="form-control" value="<?php echo $to->stok_produk ?>">
+                 <input type="number" name="stok_produk" class="form-control">
                     <?php echo form_error('stok_produk','<div class="text-small text-danger"></div>')?>
                  </div>
           
                  <div class="form-group">
                     <label>Tanggal Upload Produk</label>
-                    <input type="date" name="tanggal_upload" class="form-control" value="<?php echo $to->tanggal_upload ?>">
+                    <input type="date" name="tanggal_upload" class="form-control">
                     <?php echo form_error('tanggal_upload','<div class="text-small text-danger"></div>')?>
                 </div>
 
 
                     <button type="submit" class="btn btn-success">Submit</button>
-                    <a class="btn btn-danger" href="<?php echo base_url();?>desira">Cancel</a>
-                </form>
-                <?php endforeach; ?> 
+                    <a class="btn btn-danger" href="<?php echo base_url();?>tauty_cake">Cancel</a>
+                </form> 
             </div>
         </div>               
 </div>

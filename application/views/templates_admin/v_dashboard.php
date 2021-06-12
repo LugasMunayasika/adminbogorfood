@@ -103,9 +103,9 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Desira</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $desira ?> PRODUK</div><hr>
-                            <a href="<?php echo base_url('desira');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                    Tauty Cake</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tauty_cake ?> PRODUK</div><hr>
+                            <a href="<?php echo base_url('tauty_cake');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

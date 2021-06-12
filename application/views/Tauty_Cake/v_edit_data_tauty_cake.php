@@ -71,50 +71,57 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Detail Data Produk Toko Desira</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Data Produk Toko Tauty Cake</h6>
             </div>
     <div class="card-body">
-        <table class="table table-no-bordered table-striped">
-            <tbody>
-              <tr>
-                <th> Kode Produk  </th>
-                <td><span> : <?php echo $detail->kode_produk ?></span></td>
-              </tr>
-              <tr>
-                <th> Nama Produk   </th>
-                <td><span> : <?php echo $detail->nama_produk ?></span></td>
-              </tr>
-                <tr>
-                <th> Deskripsi Produk   </th>
-                <td><span> : <?php echo $detail->deskripsi_produk ?></span></td>
-              </tr>
-              <tr>
-                <th> Foto Produk </th>
-                <td><span> :  <img width="200px" src="<?php echo base_url().'assets/img/desira/'.$detail->foto_produk ?>"></span></td>
-              </tr>
-              <tr>
-                <th> Harga Produk </th>
-                <td><span> : Rp. <?php echo number_format($detail->harga_produk,0,',','.') ?></span></td>
-              </tr>
-              <tr>
-                <th> Stock </th>
-                <td><span> : <?php echo $detail->stok_produk ?></span></td>
-              </tr>
-               <tr>
-                <th> Tanggal Upload </th>
-                <td><span> : <?php echo $detail->tanggal_upload?></span></td>
-              </tr>
-              <tr>
-                <th> </th>
-                <td>
-                    <a class="btn btn-danger float-right" href="<?=base_url()?>desira">Cancel</a>
-                </td>
-              </tr>
-             
-                
+        <?php foreach ($toko_tauty_cake as $to) : ?>
+            <form method="POST" action="<?php echo base_url('tauty_cake/updateDataAksi'); ?>">
+                <div class="form-group">
+                    <label>Kode Produk : </label>
+                    <input type="hidden" name="id_produk" class="form-control" value="<?php echo $to->id_produk ?>" >
+                    <input type="text" name="kode_produk" class="form-control" value="<?php echo $to->kode_produk ?>">
+                    <?php echo form_error('kode_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+          
+                <div class="form-group">
+                    <label>Nama Produk : </label>
+                    <input type="text" name="nama_produk" class="form-control" value="<?php echo $to->nama_produk ?>">
+                    <?php echo form_error('nama_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi Produk : </label>
+                    <input type="text" name="deskripsi_produk" class="form-control" value="<?php echo $to->deskripsi_produk ?>">
+                    <?php echo form_error('deskripsi_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Foto Produk : </label>
+                    <input type="file" name="foto_produk" class="form-control-file"><br>
+                    <img src="<?php echo base_url().'assets/img/tauty_cake/'.$to->foto_produk ?>" width="90" height="110">
+                    <p><b><?php echo $to->foto_produk?></b></p>
+                   <?php echo form_error('foto_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Harga Produk</label>
+                    <input type="number" name="harga_produk" class="form-control" value="<?php echo $to->harga_produk ?>">
+                    <?php echo form_error('harga_produk','<div class="text-small text-danger"></div>')?>
+                </div>
+                <div class="form-group">
+                    <label>Stock</label>
+                 <input type="number" name="stok_produk" class="form-control" value="<?php echo $to->stok_produk ?>">
+                    <?php echo form_error('stok_produk','<div class="text-small text-danger"></div>')?>
+                 </div>
+          
+                 <div class="form-group">
+                    <label>Tanggal Upload Produk</label>
+                    <input type="date" name="tanggal_upload" class="form-control" value="<?php echo $to->tanggal_upload ?>">
+                    <?php echo form_error('tanggal_upload','<div class="text-small text-danger"></div>')?>
+                </div>
 
-        </tbody> 
-      </table>
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <a class="btn btn-danger" href="<?php echo base_url();?>tauty_cake">Cancel</a>
+                </form>
+                <?php endforeach; ?> 
             </div>
         </div>               
 </div>
