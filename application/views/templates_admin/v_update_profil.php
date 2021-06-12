@@ -5,7 +5,7 @@
 <div id="content" >
 
     <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+    <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top shadow">
 
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -49,11 +49,11 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url()"dashboard/profil_admin">
+                    <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profil_admin">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -62,59 +62,51 @@
         </ul>
     </nav>
 
-    <!-- Begin Page Content -->
+<!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <!-- DataTales Example -->
+        <!-- Form Update -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tambah Data Produk Tobokito</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Ubah Profil Admin</h6><br>
             </div>
-    <div class="card-body">
-            <form method="POST" action="<?php echo base_url('tobokito/tambahDataAksi')?>">
-                <div class="form-group">
-                    <label>Kode Produk : </label>
-                    <input type="text" name="kode_produk" class="form-control">
-                    <?php echo form_error('kode_produk','<div class="text-small text-danger"></div>')?>
-                </div>
+            
+    <div class="card-body"> 
+      <?php foreach ($profil as $p) : ?>
+        <form method="POST" 
+        action="<?php echo base_url('dashboard/updateDataAksi') ?>">
           
-                <div class="form-group">
-                    <label>Nama Produk : </label>
-                    <input type="text" name="nama_produk" class="form-control">
-                    <?php echo form_error('nama_produk','<div class="text-small text-danger"></div>')?>
-                </div>
-                <div class="form-group">
-                    <label>Deskripsi Produk : </label>
-                    <input type="text" name="deskripsi_produk" class="form-control">
-                    <?php echo form_error('deskripsi_produk','<div class="text-small text-danger"></div>')?>
-                </div>
-                <div class="form-group">
-                    <label>Foto Produk : </label>
-                    <input type="file" name="foto_produk" class="form-control">
-                    <?php echo form_error('foto_produk','<div class="text-small text-danger"></div>')?>
-                </div>
-                <div class="form-group">
-                    <label>Harga Produk</label>
-                    <input type="number" name="harga_produk" class="form-control">
-                    <?php echo form_error('harga_produk','<div class="text-small text-danger"></div>')?>
-                </div>
-                <div class="form-group">
-                    <label>Stock</label>
-                 <input type="number" name="stok_produk" class="form-control">
-                    <?php echo form_error('stok_produk','<div class="text-small text-danger"></div>')?>
-                 </div>
-          
-                 <div class="form-group">
-                    <label>Tanggal Upload Produk</label>
-                    <input type="date" name="tanggal_upload" class="form-control">
-                    <?php echo form_error('tanggal_upload','<div class="text-small text-danger"></div>')?>
-                </div>
+          <div class="form-group">
+            <label>Nama Admin : </label>
+            <input type="hidden" name="id_login" class="form-control" value="<?php echo $p->id_login ?>">
+            <input type="text" name="nama" class="form-control" value="<?php echo $p->nama ?>">
+            <?php echo form_error('nama','<div class="text-small text-danger"></div>')?>
+          </div>
+          <div class="form-group">
+              <label>Username : </label>
+              <input type="text" name="username" class="form-control" value="<?php echo $p->username ?>">
+              <?php echo form_error('username','<div class="text-small text-danger"></div>')?>
+          </div>
+           <div class="form-group">
+              <label>Password : </label>
+              <input type="password" name="password" class="form-control" value="<?php echo $p->password ?>">
+              <?php echo form_error('password','<div class="text-small text-danger"></div>')?>
+          </div>
+          <div class="form-group">
+            <label>Foto</label>
+            <input type="file" name="foto_admin" class="form-control-file"><br>
+            <img width="200px" src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>">
+            <?php echo form_error('foto_admin','<div class="text-small text-danger"></div>')?>
+          </div>
 
+          <button type="submit" class="btn btn-success">Update</button>
+          <a class="btn btn-danger" href="<?php echo base_url()?>dashboard/profil_admin">Cancel</a>
 
-                    <button type="submit" class="btn btn-success">Submit</button>
-                    <a class="btn btn-danger" href="<?php echo base_url();?>tobokito">Cancel</a>
-                </form> 
-            </div>
-        </div>               
+        </form> 
+      <?php endforeach; ?>
+    
+  </div>
+  <!-- /.card-body -->
+</div>
 </div>
 </div>

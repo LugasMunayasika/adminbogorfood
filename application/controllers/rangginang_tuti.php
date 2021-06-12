@@ -8,8 +8,9 @@ class Rangginang_Tuti extends CI_Controller {
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Rangginang Ceu Tuti";
         $data['rangginang_tuti'] = $this->model_rangginang_tuti->get_data('tbl_rangginang_tuti')->result();
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Rangginang_Tuti/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Rangginang_Tuti/v_rangginang_tuti',$data);
 		$this->load->view('templates_admin/footer');
@@ -19,8 +20,9 @@ class Rangginang_Tuti extends CI_Controller {
 		$data['user'] = $this->db->get_where('tbl_login',['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Rangginang Ceu Tuti | Tambah Data";
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Rangginang_Tuti/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Rangginang_Tuti/v_tambah_data_rangginang_tuti',$data);
 		$this->load->view('templates_admin/footer');
@@ -72,10 +74,11 @@ class Rangginang_Tuti extends CI_Controller {
     $data['user'] = $this->db->get_where('tbl_login',['username' =>
      $this->session->userdata('username')])->row_array();
      $data['title']="Toko Rangginang Ceu Tuti | Detail Produk";
+     $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
      $this->load->model('model_rangginang_tuti');
      $detail = $this->model_rangginang_tuti->detail_data($id);
      $data['detail'] = $detail;
-     $this->load->view('rangginang_tuti/header',$data);
+     $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('rangginang_tuti/v_detail_data_rangginang_tuti',$data);
       $this->load->view('templates_admin/footer');
@@ -98,9 +101,10 @@ class Rangginang_Tuti extends CI_Controller {
       $data['user'] = $this->db->get_where('tbl_login',['username' =>
       $this->session->userdata('username')])->row_array();
       $data['title']="Toko Rangginang Ceu Tuti | Edit Data";
+      $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
       $data['toko_rangginang_tuti']=$this->db->query("SELECT * FROM tbl_rangginang_tuti WHERE id_produk='$id'")->result();
       $where = array('id_produk'=> $id);
-      $this->load->view('rangginang_tuti/header',$data);
+      $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('rangginang_tuti/v_edit_data_rangginang_tuti',$data);
       $this->load->view('templates_admin/footer');

@@ -8,8 +8,9 @@ class Olaten extends CI_Controller {
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Olaten";
         $data['olaten'] = $this->model_olaten->get_data('tbl_olaten')->result();
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Olaten/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Olaten/v_olaten',$data);
 		$this->load->view('templates_admin/footer');
@@ -19,8 +20,9 @@ class Olaten extends CI_Controller {
 		$data['user'] = $this->db->get_where('tbl_login',['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Olaten | Tambah Data";
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Olaten/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Olaten/v_tambah_data_olaten',$data);
 		$this->load->view('templates_admin/footer');
@@ -72,10 +74,11 @@ class Olaten extends CI_Controller {
     $data['user'] = $this->db->get_where('tbl_login',['username' =>
      $this->session->userdata('username')])->row_array();
      $data['title']="Toko Olaten | Detail Produk";
+     $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
      $this->load->model('model_olaten');
      $detail = $this->model_olaten->detail_data($id);
      $data['detail'] = $detail;
-     $this->load->view('olaten/header',$data);
+     $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('olaten/v_detail_data_olaten',$data);
       $this->load->view('templates_admin/footer');
@@ -98,9 +101,10 @@ class Olaten extends CI_Controller {
       $data['user'] = $this->db->get_where('tbl_login',['username' =>
       $this->session->userdata('username')])->row_array();
       $data['title']="Toko Olaten | Edit Data";
+      $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
       $data['toko_olaten']=$this->db->query("SELECT * FROM tbl_olaten WHERE id_produk='$id'")->result();
       $where = array('id_produk'=> $id);
-      $this->load->view('olaten/header',$data);
+      $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('olaten/v_edit_data_olaten',$data);
       $this->load->view('templates_admin/footer');

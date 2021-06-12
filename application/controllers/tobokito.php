@@ -8,6 +8,7 @@ class Tobokito extends CI_Controller {
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Tobokito";
         $data['tobokito'] = $this->model_tobokito->get_data('tbl_tobokito')->result();
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
 		$this->load->view('Tobokito/header',$data);
 		$this->load->view('templates_admin/sidebar');

@@ -5,7 +5,7 @@
 <div id="content" >
 
     <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+    <nav class="navbar navbar-expand navbar-light bg-success topbar mb-4 static-top shadow">
 
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -43,20 +43,20 @@
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php foreach ($profil as $p) : ?>
-                                <span class="mr-2 d-none d-lg-inline text-gray-100 small"> 
-                                    <?php echo 'Selamat Datang , '.$p->nama; ?> </span>
-                                <img class="img-profile rounded-circle"
-                                    src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>">
-                                <?php endforeach; ?>
+                    <span class="mr-2 d-none d-lg-inline text-gray-100 small"> 
+                        <?php echo 'Selamat Datang , '.$p->nama; ?> </span>
+                    <img class="img-profile rounded-circle"
+                        src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>">
+                    <?php endforeach; ?>
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profil_admin">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profil
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profil_admin">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Profil
                     </a>
-                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
+                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Keluar
                     </a>
@@ -65,57 +65,46 @@
         </ul>
     </nav>
 
-    <!-- Begin Page Content -->
+<!-- Begin Page Content -->
     <div class="container-fluid">
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Detail Data Produk Toko Olaten</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Profil Admin</h6><br>
             </div>
-    <div class="card-body">
-        <table class="table table-no-bordered table-striped">
+            
+            <div class="card-body">
+                <table class="table table-no-bordered table-striped">
+           <?php foreach ($profil as $p) : ?>
             <tbody>
               <tr>
-                <th> Kode Produk  </th>
-                <td><span> : <?php echo $detail->kode_produk ?></span></td>
+                <th> Nama </th>
+                <td><span> : <?php echo $p->nama ?></span></td>
               </tr>
               <tr>
-                <th> Nama Produk   </th>
-                <td><span> : <?php echo $detail->nama_produk ?></span></td>
-              </tr>
-                <tr>
-                <th> Deskripsi Produk   </th>
-                <td><span> : <?php echo $detail->deskripsi_produk ?></span></td>
+                <th> Username </th>
+                <td><span> : <?php echo $p->username ?></span></td>
               </tr>
               <tr>
-                <th> Foto Produk </th>
-                <td><span> :  <img width="200px" src="<?php echo base_url().'assets/img/olaten/'.$detail->foto_produk ?>"></span></td>
+                <th> Kata Sandi </th>
+                <td><span> : <?php echo $p->password?></span></td>
               </tr>
               <tr>
-                <th> Harga Produk </th>
-                <td><span> : Rp. <?php echo number_format($detail->harga_produk,0,',','.') ?></span></td>
+                <th> Foto admin </th>
+                <td><span> : <img width="60px" src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>"></span></td>
               </tr>
               <tr>
-                <th> Stock </th>
-                <td><span> : <?php echo $detail->stok_produk ?></span></td>
-              </tr>
-               <tr>
-                <th> Tanggal Upload </th>
-                <td><span> : <?php echo $detail->tanggal_upload?></span></td>
-              </tr>
-              <tr>
-                <th> </th>
+                <th><a class="btn btn-danger" href="<?=base_url()?>dashboard">Cancel</a> 
+                <a class="btn btn-warning" href="<?php echo base_url('dashboard/updateData/'.$p->id_login) ?> ">Ubah Profil</a> </th>
+               
                 <td>
-                    <a class="btn btn-danger float-right" href="<?=base_url()?>olaten">Cancel</a>
                 </td>
-              </tr>
-             
-                
-
-        </tbody> 
+              </tr>          
+        </tbody>
+        <?php endforeach ; ?> 
       </table>
-            </div>
-        </div>               
+  </div>
+</div>
 </div>
 </div>

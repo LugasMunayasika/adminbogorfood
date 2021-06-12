@@ -8,8 +8,9 @@ class Desira extends CI_Controller {
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Desira";
         $data['desira'] = $this->model_desira->get_data('tbl_desira')->result();
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Desira/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Desira/v_desira',$data);
 		$this->load->view('templates_admin/footer');
@@ -19,8 +20,9 @@ class Desira extends CI_Controller {
 		$data['user'] = $this->db->get_where('tbl_login',['username' =>
         $this->session->userdata('username')])->row_array();
         $data['title']="Toko Desira | Tambah Data";
+        $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
 		$this->model_login->keamanan();
-		$this->load->view('Desira/header',$data);
+		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('Desira/v_tambah_data_desira',$data);
 		$this->load->view('templates_admin/footer');
@@ -72,10 +74,11 @@ class Desira extends CI_Controller {
     $data['user'] = $this->db->get_where('tbl_login',['username' =>
      $this->session->userdata('username')])->row_array();
      $data['title']="Toko Desira | Detail Produk";
+     $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
      $this->load->model('model_desira');
      $detail = $this->model_desira->detail_data($id);
      $data['detail'] = $detail;
-     $this->load->view('desira/header',$data);
+     $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('desira/v_detail_data_desira',$data);
       $this->load->view('templates_admin/footer');
@@ -99,8 +102,9 @@ class Desira extends CI_Controller {
       $this->session->userdata('username')])->row_array();
       $data['title']="Toko Desira | Edit Data";
       $data['toko_desira']=$this->db->query("SELECT * FROM tbl_desira WHERE id_produk='$id'")->result();
+      $data['profil'] = $this->model_admin->get_data('tbl_login')->result();
       $where = array('id_produk'=> $id);
-      $this->load->view('desira/header',$data);
+      $this->load->view('templates_admin/header',$data);
       $this->load->view('templates_admin/sidebar');
       $this->load->view('desira/v_edit_data_desira',$data);
       $this->load->view('templates_admin/footer');

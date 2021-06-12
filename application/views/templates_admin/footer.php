@@ -1,8 +1,8 @@
  <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-warning">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span style="color:white"><b>Copyright &copy; Bogorfood 2021</b></span>
                     </div>
                 </div>
             </footer>
@@ -80,6 +80,34 @@
     });
     $(document).ready(function(){
         $('#tbl_dapur_bujalu').DataTable({
+            rowReorder:{
+                selector: 'td:nth-child(2)'
+            },
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": false,
+            "info": true,
+            "autoWidth": true,
+            "responsive": true,
+        });
+    });
+    $(document).ready(function(){
+        $('#tbl_desira').DataTable({
+            rowReorder:{
+                selector: 'td:nth-child(2)'
+            },
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": false,
+            "info": true,
+            "autoWidth": true,
+            "responsive": true,
+        });
+    });
+    $(document).ready(function(){
+        $('#tbl_rangginang_tuti').DataTable({
             rowReorder:{
                 selector: 'td:nth-child(2)'
             },
