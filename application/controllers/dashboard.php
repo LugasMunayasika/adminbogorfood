@@ -12,8 +12,6 @@ class Dashboard extends CI_Controller {
 		$data['dapur_bujalu'] = $dapur_bujalu->num_rows();
 		$rangginang_tuti = $this->db->query("SELECT * FROM tbl_rangginang_tuti");
 		$data['rangginang_tuti'] = $rangginang_tuti->num_rows();
-		$tobokito = $this->db->query("SELECT * FROM tbl_tobokito");
-		$data['tobokito'] = $tobokito->num_rows();
 		$tauty_cake = $this->db->query("SELECT * FROM tbl_tauty_cake");
 		$data['tauty_cake'] = $tauty_cake->num_rows();
 		$data['profil'] = $this->model_admin->get_data('tbl_login')->result();

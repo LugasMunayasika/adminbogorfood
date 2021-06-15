@@ -32,8 +32,6 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" <?= $this->uri->segment(1) == 'dapur_bujalu' ? 
             'collapse-item style="background-color: #1cc88a"'  : ''?> href="<?php echo base_url();?>dapur_bujalu">Toko Dapur Bujalu</a>
-             <a class="collapse-item" <?= $this->uri->segment(1) == 'olaten' ? 
-            'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>olaten">Toko Olaten</a>
             <a class="collapse-item" <?= $this->uri->segment(1) == 'tauty_cake' ? 
             'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>tauty_cake">Toko Tauty Cake</a>
              <a class="collapse-item" <?= $this->uri->segment(1) == 'rangginang_tuti' ? 
