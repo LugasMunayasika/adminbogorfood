@@ -40,7 +40,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang! Silahkan Login</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Admin BogorFood</h1>
                                     </div>
                                     <form class="user" action="<?=base_url('login/ceklogin');?>" method="POST">
                                         <?php 

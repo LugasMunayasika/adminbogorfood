@@ -14,39 +14,24 @@
              <!-- Divider -->
              <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Dashboard -->
 <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? ' active" style="background-color:#858796"' : '' ?>">
     <a class="nav-link" href="<?php echo base_url();?>dashboard">
         <i class="fas fa-fw fa-home"></i>
-        <span>Dashboard</span>
-    </a>
-</li>
-<!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item dropdown <?= $this->uri->segment(1) == 'dapur_bujalu' || $this->uri->segment(1) == 'olaten' || $this->uri->segment(1) == 'tauty_cake' || $this->uri->segment(1) == 'rangginang_tuti' ? 'active' : ''?>">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-database"></i>
-        <span>Master Produk</span>
-    </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" <?= $this->uri->segment(1) == 'dapur_bujalu' ? 
-            'collapse-item style="background-color: #1cc88a"'  : ''?> href="<?php echo base_url();?>dapur_bujalu">Toko Dapur Bujalu</a>
-            <a class="collapse-item" <?= $this->uri->segment(1) == 'tauty_cake' ? 
-            'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>tauty_cake">Toko Tauty Cake</a>
-             <a class="collapse-item" <?= $this->uri->segment(1) == 'rangginang_tuti' ? 
-            'collapse-item style="background-color: #1cc88a"'  : ''?>  href="<?php echo base_url();?>rangginang_tuti">Toko Rangginang Tuti</a>
-        </div>
-    </div>
-</li>
-<!-- Divider -->
+        Dashboard</a></li>
+
+<li class="nav-item <?= $this->uri->segment(1) == 'profil' || $this->uri->segment(1) == '' ? ' active" style="background-color:#858796"' : '' ?>">
+</a>
+    <a class="nav-link" href="<?php echo base_url()?>profil/profil_admin">
+        <i class="fas fa-fw fa-user"></i>Profil Admin
+    </a></li>
+
 <hr class="sidebar-divider d-none d-md-block">
 
 
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <!-- <button class="rounded-circle border-0" id="sidebarToggle"></button> -->
             </div>
         </ul>
-        <!-- End of Sidebar -->
+        <!-- End of Sidebar --> 
