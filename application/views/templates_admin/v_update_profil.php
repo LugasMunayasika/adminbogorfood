@@ -49,7 +49,7 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profil_admin">
+                    <a class="dropdown-item" href="<?php echo base_url()?>profil/profil_admin">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profil
                     </a>
@@ -74,7 +74,7 @@
     <div class="card-body"> 
       <?php foreach ($profil as $p) : ?>
         <form method="POST" 
-        action="<?php echo base_url('dashboard/updateDataAksi') ?>">
+        action="<?php echo base_url('profil/updateDataAksi') ?>">
           
           <div class="form-group">
             <label>Nama Admin : </label>
@@ -100,7 +100,7 @@
           </div>
 
           <button type="submit" class="btn btn-success">Update</button>
-          <a class="btn btn-danger" href="<?php echo base_url()?>dashboard/profil_admin">Cancel</a>
+          <a class="btn btn-danger" href="<?php echo base_url()?>profil/profil_admin">Cancel</a>
 
         </form> 
       <?php endforeach; ?>

@@ -1,5 +1,5 @@
  <!-- Footer -->
-            <footer class="sticky-footer bg-warning">
+            <footer class="sticky-footer bg-dark">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span style="color:white"><b>Copyright &copy; Bogorfood 2021</b></span>

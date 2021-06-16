@@ -50,17 +50,6 @@
                     <?php endforeach; ?>
                 </a>
                 <!-- Dropdown - User Information -->
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                    aria-labelledby="userDropdown">
-                    <!-- <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profil_admin">
-                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Profil
-                    </a> -->
-                    <a class="dropdown-item" href="<?php echo base_url()?>index.php/login/logout">
-                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Keluar
-                    </a>
-                </div>
             </li>
         </ul>
     </nav>
@@ -95,8 +84,8 @@
                 <td><span> : <img width="60px" src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>"></span></td>
               </tr>
               <tr>
-                <th><a class="btn btn-danger" href="<?=base_url()?>dashboard">Cancel</a> 
-                <a class="btn btn-warning" href="<?php echo base_url('dashboard/updateData/'.$p->id_login) ?> ">Ubah Profil</a> </th>
+                <th><a class="btn btn-danger" href="<?=base_url()?>profil/profil_admin">Cancel</a> 
+                <a class="btn btn-warning" href="<?php echo base_url('profil/updateData/'.$p->id_login) ?> ">Ubah Profil</a> </th>
                
                 <td>
                 </td>

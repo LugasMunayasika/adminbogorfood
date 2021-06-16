@@ -51,15 +51,7 @@
                                     src="<?php echo base_url().'assets/img/'.$p->foto_admin ?>">
                                 <?php endforeach; ?>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url()?>login/logout">
-                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Keluar
-                    </a>
-                   
-                 
-                </div>
+               
             </li>
 
         </ul>
@@ -79,42 +71,42 @@
         <div class="row">
             <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Dapur Bujalu</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $dapur_bujalu?> PRODUK</div><hr>
-                            <a href="<?php echo base_url('dapur_bujalu');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo base_url('dapur_bujalu');?>" class="small-box-footer" style="color: green"> <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Tauty Cake</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $tauty_cake ?> PRODUK</div><hr>
-                            <a href="<?php echo base_url('tauty_cake');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="<?php echo base_url('tauty_cake');?>" class="small-box-footer" style="color: green"> <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Rangginang Ceu Tuti</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"> <?php echo $rangginang_tuti ?> PRODUK</div><hr>
-                                 <a href="<?php echo base_url('rangginang_tuti');?>" class="small-box-footer" style="color: green">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                                 <a href="<?php echo base_url('rangginang_tuti');?>" class="small-box-footer" style="color: green"> <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
