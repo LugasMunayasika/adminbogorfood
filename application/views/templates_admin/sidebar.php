@@ -24,12 +24,15 @@
     <a class="nav-link" href="<?php echo base_url()?>profil/profil_admin">
         <i class="fas fa-fw fa-user"></i>Profil Admin
     </a></li>
+    <hr class="sidebar-divider d-none d-md-block">
 
-<li class="nav-item <?= $this->uri->segment(1) == 'profil' || $this->uri->segment(1) == '' ?>">
+
+<li class="nav-item <?= $this->uri->segment(1) == 'profil' || $this->uri->segment(1) == '' ?>" style="margin-top:500px;">
 </a>
     <a class="nav-link" href="<?php echo base_url()?>login/logout">
         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout
     </a></li>
+
 
 <hr class="sidebar-divider d-none d-md-block">
 

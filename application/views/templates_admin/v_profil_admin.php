@@ -60,7 +60,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Profil Admin</h6><br>
+                <h6 class="m-0 font-weight-bold text-success">Profil Admin</h6><br>
             </div>
             
             <div class="card-body">
@@ -85,7 +85,7 @@
               </tr>
               <tr>
                 <th><a class="btn btn-danger" href="<?=base_url()?>profil/profil_admin">Cancel</a> 
-                <a class="btn btn-warning" href="<?php echo base_url('profil/updateData/'.$p->id_login) ?> ">Ubah Profil</a> </th>
+                <a class="btn btn-success" href="<?php echo base_url('profil/updateData/'.$p->id_login) ?> ">Ubah Profil</a> </th>
                
                 <td>
                 </td>
