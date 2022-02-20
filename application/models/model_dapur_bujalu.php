@@ -18,6 +18,7 @@ class Model_dapur_bujalu extends CI_model
 	}
     public function update_data($table,$data,$where){
 		$this->db->update($table,$data,$where);
+		
 	}
 }
 ?>
